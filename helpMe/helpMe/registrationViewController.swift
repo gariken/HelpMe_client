@@ -24,6 +24,9 @@ class registrationViewController: UIViewController {
         updateUI()
     }
     
+    @IBAction func dissmisController(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
