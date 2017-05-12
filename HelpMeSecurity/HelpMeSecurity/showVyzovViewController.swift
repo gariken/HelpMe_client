@@ -10,26 +10,31 @@ import UIKit
 
 class showVyzovViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func phoneVictim(_ sender: Any) {
+        phoneNumber(phone: "+79002403131")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func phoneFather(_ sender: Any) {
+        phoneNumber(phone: "+79002403131")
     }
-    */
-
+    
+    @IBAction func phoneMother(_ sender: Any) {
+        phoneNumber(phone: "+79002403131")
+    }
+    
+    @IBAction func dismis(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    func phoneNumber(phone: String){
+        if let url = NSURL(string: "tel://\(phone)"), UIApplication.shared.canOpenURL(url as URL) {
+            UIApplication.shared.openURL(url as URL)
+        }
+        
+    }
+ 
 }

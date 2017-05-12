@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+class AlertStandart{
+    func show(_ textTitle: String, text: String, view: UIViewController) {
+        let action = UIAlertController(title: "\(textTitle)", message: "\(text)", preferredStyle: .alert)
+        let actionOk = UIAlertAction(title: "ОК", style: .default, handler: nil)
+        action.addAction(actionOk)
+        view.present(action, animated: true, completion: nil)
+    }
+}

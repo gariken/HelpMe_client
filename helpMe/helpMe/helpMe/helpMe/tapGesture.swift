@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+class TapGesture {
+    func clickTerms(_ textView: UITextView, aSelector: Selector){
+        let gesture = UITapGestureRecognizer(target: self, action: aSelector)
+        textView.isUserInteractionEnabled = true
+        textView.addGestureRecognizer(gesture)
+        print("успех")
+    }
+    
+    
+    
+}

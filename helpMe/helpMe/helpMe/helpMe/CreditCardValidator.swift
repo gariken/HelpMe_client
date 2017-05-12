@@ -95,19 +95,16 @@ public class CreditCardValidator {
     
     private static let types = [
         [
-            "name": "Amex",
-            "regex": "^3[47][0-9]{5,}$"
-        ], [
-            "name": "Visa",
+            "name": "visaCorrect",
             "regex": "^4\\d{0,}$"
         ], [
-            "name": "MasterCard",
+            "name": "mastercard",
             "regex": "^5[1-5]\\d{0,14}$"
         ], [
-            "name": "Maestro",
+            "name": "maestro",
             "regex": "^(?:5[0678]\\d\\d|6304|6390|67\\d\\d)\\d{8,15}$"
         ], [
-            "name": "Mir",
+            "name": "mir",
             "regex": "^22[0-9]{1,14}$"
         ]
     ]
